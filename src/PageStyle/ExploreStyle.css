@@ -1,454 +1,517 @@
 * {
-    padding: 0;
-    margin: 0;
-    text-decoration: none;
-    list-style: none;
-    box-sizing: border-box;
-    overflow-x: hidden;
-  }
-  
-  body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  }
-  
-  nav {
-    /* position: fixed; */
-    background-color: #11823b;
-    border-radius: 10px;
-    height: 80px;
-    width: 100%;
-  
-  }
-  
-  .logo {
-    color: #00381b;
-    font-size: 35px;
-    line-height: 80px;
-    padding: 0 40px;
-    font-weight: bold;
-    font-style: italic;
-  }
-  
-  ul {
-    float: right;
-    margin-right: 20px;
-  }
-  
-  li {
-    display: inline-block;
-    line-height: 70px;
-    margin: 0 5px;
-  }
-  
-  a {
-    color: white;
-    padding: 7px 13px;
-    border-radius: 5px;
-    font-size: 20px;
-    font-weight: 500;
-    text-transform: uppercase;
-  }
-  
-  a.active,
-  a:hover {
-    background: white;
-    border-radius: 10px;
-    transition: .3s;
-    color: #11823b
-  }
-  
-  @media(max-width: 940px) {
-    nav ul {
-      position: absolute;
-      top: 80px;
-      left: -100%;
-      background: none;
-      height: 100vh;
-      width: 100%;
-      display: block;
-      text-align: center;
-      transition: all 0.3s ease;
-      background-color: #11823b;
-      overflow: auto;
-      padding-bottom: 50px;
-      z-index: 2;
-    }
-  
-    nav ul li {
-      display: block;
-      overflow: auto;
-      margin: 10px 0;
-    }
-  
-    nav ul li a {
-      font-size: 20px;
-      display: block;
-    }
-  
-    nav .menu-btn i {
-      display: block;
-    }
-  
-    #click:checked~.menu-btn i:before {
-      content: "\f00d";
-    }
-  }
-  
-  .menu-btn i {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+nav {
+  /* position: fixed; */
+  background-color: #11823b;
+  border-radius: 10px;
+  height: 80px;
+  width: 100%;
+
+}
+
+.logo {
+  color: #00381b;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 40px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+ul {
+  float: right;
+  margin-right: 20px;
+}
+
+li {
+  display: inline-block;
+  line-height: 70px;
+  margin: 0 5px;
+}
+
+a {
+  color: white;
+  padding: 7px 13px;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+a.active,
+a:hover {
+  background: white;
+  border-radius: 10px;
+  transition: .3s;
+  color: #11823b
+}
+
+@media(max-width: 940px) {
+  nav ul {
     position: absolute;
-    top: 25px;
-    right: 30px;
-    font-size: 25px;
-    cursor: pointer;
-    display: none;
-  }
-  
-  #click:checked~ul {
-    left: 0%;
-  }
-  
-  #click {
-    display: none;
-  }
-  
-  i {
-    color: aliceblue;
-  }
-  
-  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
-  
-  :root {
-    --first-color: hsl(82, 60%, 28%);
-    --title-color: hsl(0, 0%, 15%);
-    --text-color: hsl(0, 0%, 35%);
-    --body-color: hsl(0, 0%, 95%);
-    --container-color: hsl(0, 0%, 100%);
-  
-    --body-font: "Poppins", sans-serif;
-    --h2-font-size: 1.25rem;
-    --small-font-size: .813rem;
-  }
-  
-  @media screen and (min-width: 1120px) {
-    :root {
-      --h2-font-size: 1.5rem;
-      --small-font-size: .875rem;
-    }
-  }
-  
-  
-  body {
-    font-family: var(--body-font);
-    background-color: var(--body-color);
-    color: var(--text-color);
-  }
-  
-  img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-  }
-  
-  /*=============== CARD ===============*/
-  .container {
-    display: grid;
-    place-items: center;
+    top: 80px;
+    left: -100%;
+    background: none;
+    height: 100vh;
     width: 100%;
-    /* margin-inline: 1.5rem;
+    display: block;
+    text-align: center;
+    transition: all 0.3s ease;
+    background-color: #11823b;
+    overflow: auto;
+    padding-bottom: 50px;
+    z-index: 2;
+  }
+
+  nav ul li {
+    display: block;
+    overflow: auto;
+    margin: 10px 0;
+  }
+
+  nav ul li a {
+    font-size: 20px;
+    display: block;
+  }
+
+  nav .menu-btn i {
+    display: block;
+  }
+
+  #click:checked~.menu-btn i:before {
+    content: "\f00d";
+  }
+}
+
+.menu-btn i {
+  position: absolute;
+  top: 25px;
+  right: 30px;
+  font-size: 25px;
+  cursor: pointer;
+  display: none;
+}
+
+#click:checked~ul {
+  left: 0%;
+}
+
+#click {
+  display: none;
+}
+
+i {
+  color: aliceblue;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+:root {
+  --first-color: hsl(82, 60%, 28%);
+  --title-color: hsl(0, 0%, 15%);
+  --text-color: hsl(0, 0%, 35%);
+  --body-color: hsl(0, 0%, 95%);
+  --container-color: hsl(0, 0%, 100%);
+
+  --body-font: "Poppins", sans-serif;
+  --h2-font-size: 1.25rem;
+  --small-font-size: .813rem;
+}
+
+@media screen and (min-width: 1120px) {
+  :root {
+    --h2-font-size: 1.5rem;
+    --small-font-size: .875rem;
+  }
+}
+
+
+body {
+  font-family: var(--body-font);
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/*=============== CARD ===============*/
+.container {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  /* margin-inline: 1.5rem;
     padding-block: 5rem; */
-    /* margin-inline: 20px;
+  /* margin-inline: 20px;
     padding-block: 20px; */
-    margin: 5vh 0 5vh 0
+  margin: 5vh 0 5vh 0
+}
+
+.card__container {
+  display: grid;
+  /* row-gap: 3.5rem; */
+  row-gap: 50px;
+}
+
+.card__article {
+  position: relative;
+  overflow: hidden;
+}
+
+.card__img {
+  width: 328px;
+  height: 190px;
+  border-radius: 30px;
+  border-style: solid;
+  border-color: #14281D;
+}
+
+.card__data {
+  width: 280px;
+  background-color: var(--container-color);
+  padding: 1.5rem 2rem;
+  box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
+  border-radius: 1rem;
+  position: absolute;
+  /* bottom: -9rem; */
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  opacity: 0;
+  transition: opacity 1s 1s;
+}
+
+.card__description {
+  display: block;
+  font-size: var(--small-font-size);
+  margin-bottom: .25rem;
+}
+
+.card__title {
+  font-size: var(--h2-font-size);
+  font-weight: 500;
+  color: var(--title-color);
+  margin-bottom: .75rem;
+}
+
+.card__button {
+  text-decoration: none;
+  font-size: var(--small-font-size);
+  font-weight: 500;
+  color: var(--first-color);
+}
+
+.card__button:hover {
+  text-decoration: underline;
+}
+
+/* Naming animations in hover */
+.card__article:hover .card__data {
+  animation: show-data 1s forwards;
+  opacity: 1;
+  transition: opacity .3s;
+}
+
+.card__article:hover {
+  animation: remove-overflow 2s forwards;
+}
+
+.card__article:not(:hover) {
+  animation: show-overflow 2s forwards;
+}
+
+.card__article:not(:hover) .card__data {
+  animation: remove-data 1s forwards;
+}
+
+/* Card animation */
+@keyframes show-data {
+  50% {
+    transform: translateY(-10rem);
   }
-  
-  .card__container {
-    display: grid;
-    /* row-gap: 3.5rem; */
-    row-gap: 50px;
+
+  100% {
+    transform: translateY(-7rem);
   }
-  
-  .card__article {
-    position: relative;
+}
+
+@keyframes remove-overflow {
+  to {
+    overflow: initial;
+  }
+}
+
+@keyframes remove-data {
+  0% {
+    transform: translateY(-7rem);
+  }
+
+  50% {
+    transform: translateY(-10rem);
+  }
+
+  100% {
+    transform: translateY(.5rem);
+  }
+}
+
+@keyframes show-overflow {
+  0% {
+    overflow: initial;
+    pointer-events: none;
+  }
+
+  50% {
     overflow: hidden;
   }
-  
-  .card__img {
-    width: 328px;
-    height: 190px;
-    border-radius: 30px;
-    border-style: solid;
-    border-color: #14281D;
+}
+
+@media screen and (max-width: 340px) {
+  .container {
+    margin-inline: 1rem;
   }
-  
+
   .card__data {
-    width: 280px;
-    background-color: var(--container-color);
-    padding: 1.5rem 2rem;
-    box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
-    border-radius: 1rem;
-    position: absolute;
-    /* bottom: -9rem; */
-    left: 0;
-    right: 0;
-    margin-inline: auto;
-    opacity: 0;
-    transition: opacity 1s 1s;
+    width: 250px;
+    padding: 1rem;
   }
-  
-  .card__description {
-    display: block;
-    font-size: var(--small-font-size);
-    margin-bottom: .25rem;
+}
+
+
+@media screen and (min-width: 768px) {
+  .card__container {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1.5rem;
   }
-  
-  .card__title {
-    font-size: var(--h2-font-size);
-    font-weight: 500;
-    color: var(--title-color);
-    margin-bottom: .75rem;
+}
+
+
+@media screen and (min-width: 1120px) {
+  .container {
+    height: auto;
+    margin: 50px 50px 50px 50px
   }
-  
-  .card__button {
-    text-decoration: none;
-    font-size: var(--small-font-size);
-    font-weight: 500;
-    color: var(--first-color);
+
+  .card__container {
+    grid-template-columns: repeat(3, 1fr);
   }
-  
-  .card__button:hover {
-    text-decoration: underline;
+
+  .card__img {
+    width: 348px;
   }
-  
-  /* Naming animations in hover */
-  .card__article:hover .card__data {
-    animation: show-data 1s forwards;
+
+  .card__data {
+    width: 316px;
+    padding-inline: 2.5rem;
+  }
+}
+
+.footer {
+  background-color: #BABD8D;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  border: solid 2px black;
+  border-radius: 10px;
+  width: 100%;
+  /* height: 7vh; */
+}
+
+.content {
+  display: inline-block;
+  padding: 50px;
+}
+
+.bottom {
+  border-radius: 10px;
+  height: 50px;
+  background-color: #7C6A0A;
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+#logo i {
+  color: #14281D;
+}
+
+main {
+  padding: 0 20vw 0 20vw;
+}
+
+.mainDiv {
+  margin-bottom: 5vh;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: #14281D;
+  background-color: #a0ffcb;
+  color: black;
+  padding: 5px 5px 10px 5px;
+  font-weight: 350;
+  line-height: 30px;
+}
+
+.mainDiv h3,
+h2,
+h4,
+p {
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.mainDiv hr {
+  margin-bottom: 5px;
+}
+
+#addImage {
+  border-style: solid;
+}
+
+.paragraphImage {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: inherit;
+}
+
+.Intro {
+  /* display: flex;
+  flex-direction: column; */
+  /* justify-content: center; */
+  align-items: center;
+  width: 100%;
+  padding: 5vh 20vw 0 20vw;
+  color: black;
+}
+
+.introHeading {
+  animation-name: leftToRight;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  margin-bottom: 5vh;
+}
+
+.introParagraph {
+  animation-name: rightToLeft;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  /* margin: 0 5vw 0 5vw */
+  margin-bottom: 5vh;
+  line-height: 30px;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.introParagraph2{
+  display: flex;
+  flex-direction: column;
+  line-height: 30px;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+@keyframes leftToRight {
+  from {
+    transform: translate(-100px);
+    opacity: 0.2;
+  }
+
+  70% {
+    transform: translate(100px);
+    opacity: 0.4;
+  }
+
+  to {
+    transform: translate(0);
     opacity: 1;
-    transition: opacity .3s;
   }
-  
-  .card__article:hover {
-    animation: remove-overflow 2s forwards;
+}
+
+@keyframes downToUp {
+  from {
+    transform: translate(0, 100px);
+    opacity: 0.2;
   }
-  
-  .card__article:not(:hover) {
-    animation: show-overflow 2s forwards;
+
+  to {
+    transform: translate(0);
+    opacity: 1;
   }
-  
-  .card__article:not(:hover) .card__data {
-    animation: remove-data 1s forwards;
+}
+
+@keyframes rightToLeft {
+  0% {
+    transform: translate(100px);
+    opacity: 0.2;
   }
-  
-  /* Card animation */
-  @keyframes show-data {
-    50% {
-      transform: translateY(-10rem);
-    }
-  
-    100% {
-      transform: translateY(-7rem);
-    }
+
+  70% {
+    transform: translate(-100px);
+    opacity: 0.4;
   }
-  
-  @keyframes remove-overflow {
-    to {
-      overflow: initial;
-    }
+
+  100% {
+    transform: translate(0);
+    opacity: 1;
   }
-  
-  @keyframes remove-data {
-    0% {
-      transform: translateY(-7rem);
-    }
-  
-    50% {
-      transform: translateY(-10rem);
-    }
-  
-    100% {
-      transform: translateY(.5rem);
-    }
+}
+
+
+@media screen and (max-width: 768px) {
+  ol {
+    margin-bottom: 3.5vh
   }
-  
-  @keyframes show-overflow {
-    0% {
-      overflow: initial;
-      pointer-events: none;
-    }
-  
-    50% {
-      overflow: hidden;
-    }
+
+  ol li {
+    line-height: 40px;
   }
-  
-  @media screen and (max-width: 340px) {
-    .container {
-      margin-inline: 1rem;
-    }
-  
-    .card__data {
-      width: 250px;
-      padding: 1rem;
-    }
-  }
-  
-  
-  @media screen and (min-width: 768px) {
-    .card__container {
-      grid-template-columns: repeat(2, 1fr);
-      column-gap: 1.5rem;
-    }
-  }
-  
-  
-  @media screen and (min-width: 1120px) {
-    .container {
-      height: auto;
-      margin: 50px 50px 50px 50px
-    }
-  
-    .card__container {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  
-    .card__img {
-      width: 348px;
-    }
-  
-    .card__data {
-      width: 316px;
-      padding-inline: 2.5rem;
-    }
-  }
-  
-  .footer {
-    background-color: #BABD8D;
-    display: flex;
-    justify-content: center;
-    margin: auto;
-    border: solid 2px black;
-    border-radius: 10px;
-    width: 100%;
-    /* height: 7vh; */
-  }
-  
-  .content {
-    display: inline-block;
-    padding: 50px;
-  }
-  
-  .bottom {
-    border-radius: 10px;
-    height: 50px;
-    background-color: #7C6A0A;
-    display: flex;
-    justify-content: center;
-    color: white;
-  }
-  
-  #logo i {
-    color: #14281D;
-  }
-  
-  main {
-    padding: 0 5vw 0 5vw;
-  }
-  
-  .mainDiv {
-    margin-bottom: 5vh;
-    border-radius: 10px;
-    border-style: solid;
-    border-color: #14281D;
-    background-color: #a0ffcb;
-    color: black;
-    padding: 5px 5px 10px 5px;
-  }
-  
-  .mainDiv h3,
-  h2,
-  h4,
-  p {
-    margin-left: 10px;
-    margin-bottom: 10px;
-  }
-  
-  .mainDiv hr {
-    margin-bottom: 5px;
-  }
-  
-  #addImage {
-    border-style: solid;
-  }
-  
-  .paragraphImage {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    height: inherit;
-  }
-  
+
   .Intro {
-    display: flex;
-    flex-direction: column;
-    /* justify-content: center; */
-    align-items: center;
-    width: 100%;
-    margin-top: 5vh;
+    padding: 5vh 10vw 0 10vw;
     color: black;
   }
-  
+
   .introHeading {
-    animation-name: leftToRight;
-    animation-duration: 1s;
-    animation-timing-function: linear;
+    margin-bottom: 3.5vh;
   }
-  
+
   .introParagraph {
-    animation-name: rightToLeft;
-    animation-duration: 1s;
-    animation-timing-function: linear;
-    margin: 0 5vw 0 5vw
+    margin-bottom: 3vh;
+    line-height: 25px;
+    font-size: 17px;
+    font-weight: 300;
   }
-  
-  @keyframes leftToRight {
-    from {
-      transform: translate(-100px);
-      opacity: 0.2;
-    }
-    70%{
-      transform: translate(100px);
-      opacity: 0.4;
-    }
-    to {
-      transform: translate(0);
-      opacity: 1;
-    }
+
+  main {
+    padding: 0 10vw 0 10vw;
   }
-  
-  @keyframes downToUp {
-    from {
-      transform: translate(0, 100px);
-      opacity: 0.2;
-    }
-  
-    to {
-      transform: translate(0);
-      opacity: 1;
-    }
-  }
-  
-  @keyframes rightToLeft {
-    0% {
-      transform: translate(100px);
-      opacity: 0.2;
-    }
-  
-    70%{
-      transform: translate(-100px);
-      opacity: 0.4;
-    }
-  
-    100% {
-      transform: translate(0);
-      opacity: 1;
-    }
-  }
+}
+
+ol {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2vh
+}
+
+ol li {
+  display: flex;
+  flex-direction: column;
+  line-height: 40px;
+}
+
+
+

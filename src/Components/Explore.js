@@ -101,7 +101,22 @@ function Explore() {
             </header>
             <div className='Intro'>
                 <h1 className='introHeading'>Travel Sylhet</h1>
-                <p className='introParagraph'>Insert Some ParagraphInsert Some ParagraphInsert Some ParagraphInsert Some ParagraphInsert Some ParagraphInsert Some ParagraphInsert Some ParagraphInsert Some ParagraphInsert Some ParagraphInsert Some ParagraphInsert Some ParagraphInsert Some ParagraphInsert Some ParagraphInsert Some ParagraphInsert Some ParagraphInsert Some ParagraphInsert Some ParagraphInsert Some ParagraphInsert Some ParagraphInsert Some ParagraphInsert Some ParagraphInsert Some ParagraphInsert Some ParagraphInsert Some ParagraphInsert Some ParagraphInsert Some ParagraphInsert Some ParagraphInsert Some ParagraphInsert Some ParagraphInsert Some Paragraph</p>
+                <p className='introParagraph'>Sylhet, a picturesque region in northeastern Bangladesh, is renowned for its stunning natural beauty and vibrant tourism industry. The area is dotted with lush tea gardens, serene waterfalls, and the tranquil riverbanks of the Surma and Kushiara rivers. Visitors are often captivated by the panoramic views of the rolling hills and the diverse flora and fauna that thrive in this region. The rich cultural heritage of Sylhet, combined with its natural wonders, makes it a popular destination for both domestic and international travelers seeking to experience the enchanting landscapes and unique traditions of Bangladesh.</p>
+                <p className='introParagraph2'><h3>Tourist Spots in Sylhet include:</h3>
+                <ol className='introList'>
+                    <li>1. Jaflong,</li>
+                    <li>2. Ratargul Swamp Forest,</li>
+                    <li>3. Baish Tila,</li>
+                    <li>4. Lawachara National Park,</li>
+                    <li>5. Madhabkunda Waterfall,</li>
+                    <li>6. Lalakhal,</li>
+                    <li>7. Pangthumai Waterfall,</li>
+                    <li>8. Bisnakandi,</li>
+                    <li>9. Baikka Beel,</li>
+                    <li>10. Hakaluki Haor</li>
+                </ol>
+                    If you have already paid a visit in any of those places, consider writing a detailed blog about your experience and costs you had to bear.
+                </p>
             </div>
             <div className="container">
                 <div className="card__container">

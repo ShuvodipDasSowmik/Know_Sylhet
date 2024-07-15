@@ -19,7 +19,7 @@ function TravelPost() {
     const handleSubmit = (event) => {
         event.preventDefault();
 
-        fetch("https://ksserver-production.up.railway.app", {
+        fetch("https://ksserver-production.up.railway.app/travel", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
