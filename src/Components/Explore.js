@@ -11,7 +11,7 @@ function Explore() {
     const [queries, setQueries] = useState([]);
 
     useEffect(() => {
-        axios.get("https://ksserver-production.up.railway.app")
+        axios.get("https://ksserver-production.up.railway.app/travel")
         .then(queries => {setQueries(queries.data)
             // console.log(queries.data);
     })
