@@ -28,7 +28,7 @@ function Education() {
                 <div className="card__data">
                     <span className="card__description">{item.location}</span>
                     {/* <h2 class="card__title">The Great Path</h2> */}
-                    <h2 className="card__title">{item.institution}</h2>
+                    <h2 className="card__title">{item.institute}</h2>
                     <a href={hash.concat(item._id)} className="card__button">
                         Read More
                     </a>
@@ -40,12 +40,12 @@ function Education() {
     const postParagraph = queries.map((item) => {
         return (
             <div className='mainDiv' id={item._id}>
-                <h2>{item.institution}</h2>
+                <h2>{item.institue}</h2>
                 <hr></hr>
                 <h3>Location</h3>
-                <p>{item.Location}</p>
+                <p>{item.location}</p>
                 <h3>Description</h3>
-                <p>{item.description}</p>
+                <p>{item.eduDescription}</p>
                 <h3>Pictures</h3>
                 <hr></hr>
                 <img src={item.imageLink} className='paragraphImage'></img>
