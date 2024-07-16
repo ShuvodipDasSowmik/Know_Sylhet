@@ -11,6 +11,8 @@ import { useEffect, useState } from 'react'
 import { FcGoogle } from "react-icons/fc";
 import { gapi } from 'gapi-script'
 import TravelPost from './Components/TravelPost';
+import EduPost from './Components/EduPost';
+import TragedyPost from './Components/TragedyPost';
 
 // const server = process.env.SERVER_ADDRESS
 const clientId = "283295762667-464audjfu21d9arjng7pc49tjlo6jp1l.apps.googleusercontent.com"
@@ -297,6 +299,8 @@ function App() {
         <Route path = "/explore" element = {<Explore />}/> 
         <Route path = "/travelpost" element = {<TravelPost />}/> 
         <Route path = '/edu' element = {<Education/>} />
+        <Route path = '/edupost' element = {<EduPost />} />
+        <Route path='/tragedypost' element = {<TragedyPost/>} />
       </Routes>
     </BrowserRouter>
   );

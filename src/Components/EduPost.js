@@ -6,25 +6,24 @@ import { useNavigate } from "react-router-dom";
 // const server = process.env.SERVER_ADDRESS
 
 
-function TravelPost() {
+function EduPost() {
 
     const navigate = useNavigate()
 
-    const [title, setTitle] = useState("")
-    const [desc, setDesc] = useState("")
+    const [institute, setInstitute] = useState("")
+    const [eduDescription, setEduDescription] = useState("")
     const [imageLink, setImageLink] = useState("")
-    const [howToReach, setHowToReach] = useState("")
-    const [whatToSee, setWhatToSee] = useState("")
+    const [location, setLocation] = useState("")
 
     const handleSubmit = (event) => {
         event.preventDefault();
 
-        fetch("https://ksserver-production.up.railway.app/travel", {
+        fetch("https://ksserver-production.up.railway.app/edu", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify({ title, desc, imageLink, howToReach, whatToSee })
+            body: JSON.stringify({ institute, eduDescription, imageLink, location })
         }).then((res) => res.json())
             .then((data) => console.log(data.message));
         navigate('/explore')
@@ -88,32 +87,23 @@ function TravelPost() {
       <br></br>
       <form  onSubmit={handleSubmit} className="form">
         <div className="input">
-          <h3>Title</h3>
-          <input type="text" placeholder="Enter the title" name="title" value={title} onChange={(e) => setTitle(e.target.value)}/>
+          <h3>Institution</h3>
+          <input type="text" placeholder="Name of Instituition" name="institute" value={institute} onChange={(e) => setInstitute(e.target.value)}/>
+        </div>
+        <div className="input">
+          <h3>Location</h3>
+          <input type="text" placeholder="Location of your Institute" name="location" value={location} onChange={(e) => setLocation(e.target.value)}/>
         </div>
         <div className="input">
           <h3>Description</h3>
-          <input type="text" placeholder="Enter the Description" name="cardDescription" value={desc} onChange={(e) => setDesc(e.target.value)}/>
+          <textarea
+            cols={50}
+            rows={10}
+            placeholder="Enter Description about your Institute" name="eduDescription" value={eduDescription} onChange={(e) => setEduDescription(e.target.value)}/>
         </div>
         <div className="input">
           <h3>Image Link</h3>
-          <input type="text" placeholder="Enter the Image Link" name="imageLink" value={imageLink} onChange={(e) => setImageLink(e.target.value)}/>
-        </div>
-        <div className="input">
-          <h3>How to Reach</h3>
-          <p>
-            <textarea
-              id="address"
-              cols={50}
-              rows={10}
-              placeholder="How to Reach"
-              name="howToReach" value={howToReach} onChange={(e) => setHowToReach(e.target.value)}
-            />
-          </p>
-        </div>
-        <div className="input">
-          <h3>What to See</h3>
-          <input type="text" placeholder="What to See" name="whatToSee" value={whatToSee} onChange={(e) => setWhatToSee(e.target.value)}/>
+          <input type="text" placeholder="Image Link of your Institute" name="imageLink" value={imageLink} onChange={(e) => setImageLink(e.target.value)}/>
         </div>
         <input type="submit" value="Submit" className="button"/>
       </form>
@@ -153,33 +143,4 @@ function TravelPost() {
     );
 }
 
-export default TravelPost;
-
-// <form onSubmit={handleSubmit}>
-        //     <label>
-        //         Title:
-        //         <input type="text" name="title" value={title} onChange={(e) => setTitle(e.target.value)} />
-        //     </label>
-        //     <br></br>
-        //     <label>
-        //         Description:
-        //         <input type="text" name="cardDescription" value={desc} onChange={(e) => setDesc(e.target.value)} />
-        //     </label>
-        //     <br></br>
-        //     <label>
-        //         Image Link:
-        //         <input type="text" name="imageLink" value={imageLink} onChange={(e) => setImageLink(e.target.value)} />
-        //     </label>
-        //     <br></br>
-        //     <label>
-        //         How To Reach:
-        //         <input type="text" name="howToReach" value={howToReach} onChange={(e) => setHowToReach(e.target.value)} />
-        //     </label>
-        //     <br></br>
-        //     <label>
-        //         What To See:
-        //         <input type="text" name="whatToSee" value={whatToSee} onChange={(e) => setWhatToSee(e.target.value)} />
-        //     </label>
-        //     <br></br>
-        //     <input type="submit" value="Submit" />
-        // </form>
+export default EduPost;

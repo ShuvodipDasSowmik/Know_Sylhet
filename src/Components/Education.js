@@ -5,7 +5,7 @@ import axios from 'axios';
 
 // const server = process.env.SERVER_ADDRESS
 
-function Explore() {
+function Education() {
 
     const hash = "#"
     const [queries, setQueries] = useState([]);
@@ -162,7 +162,7 @@ function Explore() {
                 <div className="card__container">
                     {blogCards}
                     <article className="card__article">
-                        <a href='/travelpost'><img
+                        <a href='/edupost'><img
                             src="https://cdn.iconscout.com/icon/free/png-512/free-add-insert-plus-new-tag-30489.png?f=webp&w=256"
                             alt="image"
                             className="card__img"
@@ -215,4 +215,4 @@ function Explore() {
     )
 }
 
-export default Explore;
+export default Education;
