@@ -13,6 +13,7 @@ import { gapi } from 'gapi-script'
 import TravelPost from './Components/TravelPost';
 import EduPost from './Components/EduPost';
 import TragedyPost from './Components/TragedyPost';
+import Tragedies from './Components/Tragedy';
 
 // const server = process.env.SERVER_ADDRESS
 const clientId = "283295762667-464audjfu21d9arjng7pc49tjlo6jp1l.apps.googleusercontent.com"
@@ -300,6 +301,7 @@ function App() {
         <Route path = "/travelpost" element = {<TravelPost />}/> 
         <Route path = '/edu' element = {<Education/>} />
         <Route path = '/edupost' element = {<EduPost />} />
+        <Route path='/tragedies' element = {<Tragedies/>} />
         <Route path='/tragedypost' element = {<TragedyPost/>} />
       </Routes>
     </BrowserRouter>
