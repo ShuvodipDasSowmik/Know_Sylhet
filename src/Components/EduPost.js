@@ -27,7 +27,7 @@ function EduPost() {
       body: JSON.stringify({ institute, eduDescription, imageLink, location })
     }).then((res) => res.json())
       .then((data) => console.log(data.message));
-    navigate('/explore')
+    navigate('/edu')
   }
 
   return (
