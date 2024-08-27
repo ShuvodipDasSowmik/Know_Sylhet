@@ -1,8 +1,11 @@
 Know Sylhet is a interactive website featuring all about Sylhet.
+
 Backend of Know Sylhet is deployed on Railway.app as a seperate repository. Thus, you don't have to run it on any port seperately. However, code of the backend can be found in the Server folder of this repository. 
+
 Visit Know Sylhet from here: https://ephemeral-pasca-b61629.netlify.app
 
 User Interface:
+
 a) Login Page:
 
 ![Screenshot 2024-08-27 143440](https://github.com/user-attachments/assets/336d1e60-719a-40f5-95f9-4330a8ac665d)
