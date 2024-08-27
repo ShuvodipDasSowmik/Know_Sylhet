@@ -2,7 +2,8 @@
 import '../PageStyle/ExploreStyle.css'
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-
+import Navigation from './Navigation';
+import Footer from './Footer';
 // const server = process.env.SERVER_ADDRESS
 
 function Education() {
@@ -40,7 +41,7 @@ function Education() {
     const postParagraph = queries.map((item) => {
         return (
             <div className='mainDiv' id={item._id}>
-                <h2>{item.institue}</h2>
+                <h2>{item.institute}</h2>
                 <hr></hr>
                 <h3>Location</h3>
                 <p>{item.location}</p>
@@ -48,13 +49,15 @@ function Education() {
                 <p>{item.eduDescription}</p>
                 <h3>Pictures</h3>
                 <hr></hr>
-                <img src={item.imageLink} className='paragraphImage'></img>
+                <img src={item.imageLink} className='paragraphImage'></img><br></br>
+                <hr></hr>
+                <h3>Comments (Coming Soon...)</h3>
             </div>
         )
     })
 
     return (
-        <>
+        <div style={{backgroundColor: "#fffeef"}}>
             <meta charSet="UTF-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             {/*=============== CSS ===============*/}
@@ -72,34 +75,8 @@ function Education() {
                 referrerPolicy="no-referrer"
             />
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-            <header>
-                <nav>
-                    {/* <label for="" class="menubt">
-             <i class="fas fa-bars"></i>
-        </label> */}
-                    <input type="checkbox" id="click" />
-                    <label htmlFor="click" className="menu-btn">
-                        <i className="fas fa-bars" />
-                    </label>
-                    <label className="logo">Know Sylhet</label>
-                    <ul>
-                        <li>
-                            <a href="/user">
-                                Home
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/explore">Explore Sylhet</a>
-                        </li>
-                        <li>
-                            <a href="#" className="active">Education</a>
-                        </li>
-                        <li>
-                            <a href="/tragedies">Tragedies</a>
-                        </li>
-                    </ul>
-                </nav>
-            </header>
+            <Navigation/>
+            
             <div className='Intro'>
                 <h1 className='introHeading'>Education in Sylhet</h1>
                 <p className='introParagraph'>While Sylhet is renowned as a prime tourism spot, it is not as advanced in education. Educational institutes, apart from a handful like Shahjalal University of Science and Technology (SUST) for undergraduate and postgraduate studies, Murari Chand College for HSC, Sylhet Govt. Pilot High School, Govt. Agragami Girls' High School, Blue Bird High School, and Jalalabad Cantonment Public High School for pre-HSC, fail to deliver the high standard of education that students deserve.
@@ -108,7 +85,7 @@ function Education() {
                     <br></br>
                     Although the educational institutions are not the only ones to blame, the mindset of guardians about education should also be considered. There is also a high tendency for Sylhety people to go abroad (mostly to London and Australia) for studies after their HSC.</p>
                 <p className='introParagraph2'><h3>Educational institutes in Sylhet</h3>
-                <hr></hr>
+                    <hr></hr>
                     <ol className='introList'>
                         <li><h3>Schools :</h3>
                             <ul className='introList'>
@@ -156,14 +133,14 @@ function Education() {
                         </li>
                     </ol>
                 </p>
-                <p className='introParagraph'>If you don't see a detailed post about your School, College, or University, consider </p>
+                <p className='introParagraph'>If you don't see a detailed post about your School, College, or University, consider writing a detailed blog about your institution</p>
             </div>
-            <div className="container">
+            <div className="containers">
                 <div className="card__container">
                     {blogCards}
                     <article className="card__article">
                         <a href='/edupost'><img
-                            src="https://cdn.iconscout.com/icon/free/png-512/free-add-insert-plus-new-tag-30489.png?f=webp&w=256"
+                            src={require("../Assets/add.png")}
                             alt="image"
                             className="card__img"
                             id="addImage"
@@ -182,36 +159,9 @@ function Education() {
             <main>
                 {postParagraph}
             </main>
-            <footer>
-                <div className="footer">
-                    <div className="content">
-                        <h1 style={{ color: "#482728" }}>Contact us</h1>
-                        <p>Email: royccsgopal49@gmail.com</p>
-                        <p>Mobile: 01854411356</p>
-                        <p>Address: AhasanUllah Hall BUET</p>
-                    </div>
-                    <div className="content">
-                        <h1 style={{ color: "#2E6171" }}>Follow US</h1>
-                        <li id="logo">
-                            <a href="#">
-                                <i className="fa-brands fa-facebook" />
-                            </a>
-                        </li>
-                        <li id="logo">
-                            <a href="#">
-                                <i className="fa-brands fa-whatsapp" />
-                            </a>
-                        </li>
-                        <li id="logo">
-                            <a href="#">
-                                <i className="fa-brands fa-linkedin" />
-                            </a>
-                        </li>
-                    </div>
-                </div>
-                <div className="bottom">© 2024 Your company.All Right Reserved.</div>
-            </footer>
-        </>
+            
+            <Footer />
+        </div>
     )
 }
 

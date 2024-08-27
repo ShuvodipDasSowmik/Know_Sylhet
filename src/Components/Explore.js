@@ -2,6 +2,8 @@
 import '../PageStyle/ExploreStyle.css'
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import Navigation from './Navigation'
+import Footer from './Footer';
 
 // const server = process.env.SERVER_ADDRESS
 
@@ -12,23 +14,24 @@ function Explore() {
 
     useEffect(() => {
         axios.get("https://ksserver-production.up.railway.app/travel")
-        .then(queries => {setQueries(queries.data)
-            // console.log(queries.data);
-    })
-        .catch(err => console.log(err))
+            .then(queries => {
+                setQueries(queries.data)
+                // console.log(queries.data);
+            })
+            .catch(err => console.log(err))
     }, [])
 
     const blogCards = queries.map((item) => {
         console.log(item);
-    
+
         return (
             <article className="card__article">
-                <img src={item.imageLink} alt="image" className="card__img"/>
+                <img src={item.imageLink} alt="image" className="card__img" />
                 <div className="card__data">
                     <span className="card__description">{item.cardDescription}</span>
                     {/* <h2 class="card__title">The Great Path</h2> */}
                     <h2 className="card__title">{item.title}</h2>
-                    <a href = {hash.concat(item._id)}  className="card__button">
+                    <a href={hash.concat(item._id)} className="card__button">
                         Read More
                     </a>
                 </div>
@@ -37,23 +40,25 @@ function Explore() {
     })
 
     const postParagraph = queries.map((item) => {
-        return(
+        return (
             <div className='mainDiv' id={item._id}>
-            <h2>{item.title}</h2>
-            <hr></hr>
-            <h3>How To Reach</h3>
-            <p>{item.howToReach}</p>
-            <h3>What To See</h3>
-            <p>{item.whatToSee}</p>
-            <h3>Pictures</h3>
-            <hr></hr>
-            <img src= {item.imageLink} className='paragraphImage'></img>
+                <h2>{item.title}</h2>
+                <hr></hr>
+                <h3>How To Reach</h3>
+                <p>{item.howToReach}</p>
+                <h3>What To See</h3>
+                <p>{item.whatToSee}</p>
+                <h3>Pictures</h3>
+                <hr></hr>
+                <img src={item.imageLink} className='paragraphImage'></img><br></br>
+                <hr></hr>
+                <h3>Comments (Coming Soon...)</h3>
             </div>
         )
     })
 
     return (
-        <>
+        <div style={{backgroundColor: "#fffeef"}}>
             <meta charSet="UTF-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             {/*=============== CSS ===============*/}
@@ -71,62 +76,36 @@ function Explore() {
                 referrerPolicy="no-referrer"
             />
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-            <header>
-                <nav>
-                    {/* <label for="" class="menubt">
-             <i class="fas fa-bars"></i>
-        </label> */}
-                    <input type="checkbox" id="click" />
-                    <label htmlFor="click" className="menu-btn">
-                        <i className="fas fa-bars" />
-                    </label>
-                    <label className="logo">Know Sylhet</label>
-                    <ul>
-                        <li>
-                            <a href="/user">
-                                Home
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#"  className="active">Explore Sylhet</a>
-                        </li>
-                        <li>
-                            <a href="/edu">Education</a>
-                        </li>
-                        <li>
-                            <a href="/tragedies">Tragedies</a>
-                        </li>
-                    </ul>
-                </nav>
-            </header>
+            
+            <Navigation />
+
             <div className='Intro'>
                 <h1 className='introHeading'>Travel Sylhet</h1>
                 <p className='introParagraph'>Sylhet, a picturesque region in northeastern Bangladesh, is renowned for its stunning natural beauty and vibrant tourism industry. The area is dotted with lush tea gardens, serene waterfalls, and the tranquil riverbanks of the Surma and Kushiara rivers. Visitors are often captivated by the panoramic views of the rolling hills and the diverse flora and fauna that thrive in this region. The rich cultural heritage of Sylhet, combined with its natural wonders, makes it a popular destination for both domestic and international travelers seeking to experience the enchanting landscapes and unique traditions of Bangladesh.</p>
                 <p className='introParagraph2'><h3>Tourist Spots in Sylhet include:</h3>
-                <ol className='introList'>
-                    <li>1. Jaflong,</li>
-                    <li>2. Ratargul Swamp Forest,</li>
-                    <li>3. Baish Tila,</li>
-                    <li>4. Lawachara National Park,</li>
-                    <li>5. Madhabkunda Waterfall,</li>
-                    <li>6. Lalakhal,</li>
-                    <li>7. Pangthumai Waterfall,</li>
-                    <li>8. Bisnakandi,</li>
-                    <li>9. Baikka Beel,</li>
-                    <li>10. Hakaluki Haor</li>
-                </ol>
+                    <ol className='introList'>
+                        <li>1. Jaflong,</li>
+                        <li>2. Ratargul Swamp Forest,</li>
+                        <li>3. Baish Tila,</li>
+                        <li>4. Lawachara National Park,</li>
+                        <li>5. Madhabkunda Waterfall,</li>
+                        <li>6. Lalakhal,</li>
+                        <li>7. Pangthumai Waterfall,</li>
+                        <li>8. Bisnakandi,</li>
+                        <li>9. Baikka Beel,</li>
+                        <li>10. Hakaluki Haor</li>
+                    </ol>
                     If you have already paid a visit in any of those places, consider writing a detailed blog about your experience and costs you had to bear.
                 </p>
             </div>
-            <div className="container">
+            <div className="containers">
                 <div className="card__container">
                     {blogCards}
                     <article className="card__article">
-                        <a href='/travelpost'><img
-                            src="https://cdn.iconscout.com/icon/free/png-512/free-add-insert-plus-new-tag-30489.png?f=webp&w=256"
+                        <a href='/travelpost' ><img
+                            src={require("../Assets/add.png")}
                             alt="image"
                             className="card__img"
-                            id = "addImage"
                         /></a>
                         <div className="card__data">
                             <span className="card__description">Add description</span>
@@ -142,36 +121,8 @@ function Explore() {
             <main>
                 {postParagraph}
             </main>
-            <footer>
-                <div className="footer">
-                    <div className="content">
-                        <h1 style={{ color: "#482728" }}>Contact us</h1>
-                        <p>Email: royccsgopal49@gmail.com</p>
-                        <p>Mobile: 01854411356</p>
-                        <p>Address: AhasanUllah Hall BUET</p>
-                    </div>
-                    <div className="content">
-                        <h1 style={{ color: "#2E6171" }}>Follow US</h1>
-                        <li id="logo">
-                            <a href="#">
-                                <i className="fa-brands fa-facebook" />
-                            </a>
-                        </li>
-                        <li id="logo">
-                            <a href="#">
-                                <i className="fa-brands fa-whatsapp" />
-                            </a>
-                        </li>
-                        <li id="logo">
-                            <a href="#">
-                                <i className="fa-brands fa-linkedin" />
-                            </a>
-                        </li>
-                    </div>
-                </div>
-                <div className="bottom">© 2024 Your company.All Right Reserved.</div>
-            </footer>
-        </>
+            <Footer />
+        </div>
     )
 }
 
