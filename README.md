@@ -4,6 +4,8 @@ Backend of Know Sylhet is deployed on Railway.app as a seperate repository. Thus
 
 Visit Know Sylhet from here: https://ephemeral-pasca-b61629.netlify.app
 
+Watch the video demonstration from here: https://youtu.be/mD8OsHulHwY?si=jt-27C6_g63zqfiE
+
 User Interface:
 
 a) Login Page:
